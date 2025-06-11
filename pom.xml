@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.1</version>
+    <version>3.5.0</version>
     <relativePath></relativePath>
   </parent>
   <groupId>com.example</groupId>
@@ -13,7 +13,7 @@
   <version>0</version>
   <name>${project.groupId}.${project.artifactId}</name>
   <properties>
-    <java.version>21</java.version>
+    <java.version>17</java.version>
   </properties>
   <dependencies>
     <dependency>
@@ -45,8 +45,7 @@
         </executions>
         <configuration>
           <image>
-            <builder>dashaun/builder:tiny</builder>
-            <createdDate>now</createdDate>
+            <builder>paketobuildpacks/builder-noble-java-tiny</builder>
             <name>dashaun/${project.name}:v${project.version}-${os.detected.arch}</name>
           </image>
         </configuration>
